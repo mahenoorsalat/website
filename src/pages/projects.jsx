@@ -31,14 +31,19 @@ export default function Projects() {
       </Head>
       <Container className="mt-20 mb-28">
         <div className="mt-5">
+        <div className="flex justify-between mt-16 mb-16">
+          <Image src='./logo1.png' width={50} height={50} className='scale-125 -rotate-45' alt='Aossie Logo' />
+          <Image src='./logo1.png' width={50} height={50} className='scale-125 rotate-45 opacity-[50%]' alt='Aossie Logo' />
+        </div>
+        <h1 className='text-center text-[#00843D] text-6xl font-serif dark:text-yellow-400 mb-11'>PROJECTS</h1>
           <p className='text-zinc-600 dark:text-zinc-400 text-lg font-mono leading-7'>Our Projects, where we showcase our tech wizardry and code-slinging skills! <br></br> Our portfolio is a treasure trove of open-source gems, featuring projects in a variety of languages and areas. Take a peek and see how we&apos;re making a difference with our technical spells.</p>
         </div>
         <div className='mt-16'>
           {/* <h1 className="text-4xl font-mono font-extrabold tracking-tighter text-zinc-800 dark:text-zinc-100">
             Active Projects
           </h1> */}
-          <SectionHeading>Active Projects</SectionHeading>
-          <p className='text-zinc-600 dark:text-zinc-400 text-lg font-mono leading-7 mt-3'>The following projects are currently actively maintained and mentors are available!</p>
+          {/* <SectionHeading>Active Projects</SectionHeading>
+          <p className='text-zinc-600 dark:text-zinc-400 text-lg font-mono leading-7 mt-3'>The following projects are currently actively maintained and mentors are available!</p> */}
           <ul role="list" className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3 mt-12 mb-16">
             {projects.map((project) => (
               <Card as="li" key={project.name}>

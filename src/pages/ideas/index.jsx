@@ -1,6 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Google from '../../images/GOOGLe.png'
+import Nexus from '../../images/NEXUS.png'
+import Gsoc from '../../images/GSOC.png'
 
+import Image from 'next/image'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import { getAllIdeas } from '@/helper/getAllIdeas'
@@ -27,6 +31,13 @@ export default function Ideas({ articles }) {
         <meta name="description" content="Idea List for GSOC" />
       </Head>
       <Container className="mt-20 mb-28">
+      <div className="flex justify-between mt-16 mb-16">
+          <Image src={Gsoc} width={50} height={50} className='scale-125 -rotate-45' alt='Aossie Logo' />
+          <Image src={Google} width={50} height={50} className='scale-125  ' alt='Aossie Logo' />
+          <Image src={Nexus} width={50} height={50} className='scale-125 rotate-45 ' alt='Aossie Logo' />
+
+        </div>
+        <h1 className='text-center text-[#00843D] text-6xl font-serif dark:text-yellow-400 mb-11'>IDEAS</h1>
         <div className="">
           <p className="font-mono text-lg leading-7 text-zinc-600 dark:text-zinc-400">
             Explore the world of open-source possibilities with AOSSIE&apos;s{' '}
@@ -40,11 +51,11 @@ export default function Ideas({ articles }) {
         </div>
         <Container.Inner>
           <div className="mt-10 flex justify-center sm:mt-20">
-            <div className="grid gap-6 gap-y-8 md:grid-flow-col md:grid-rows-4">
-              {articles.map((article) => (
-                <Article key={article.slug} article={article} />
-              ))}
-            </div>
+          <div className="grid gap-6 gap-y-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+  {articles.map((article) => (
+    <Article key={article.slug} article={article} />
+  ))}
+</div>
           </div>
           <div className="mt-16 text-center">
             <Link
